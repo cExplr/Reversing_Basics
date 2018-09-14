@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int checkSecret(int secret);
+
 int main(){
 	int secret = 0 ;
 
@@ -17,7 +18,11 @@ int main(){
 
 int checkSecret(int secret){
 
-	if((2*secret^4395+4*53 == 1713347713)){
+	int tmp, tmp2;
+	tmp  = 2 * secret;
+	tmp2 = 4*53;
+
+	if(  ( (tmp ^ 4395) + tmp2) == 1713347713 ){
 		return 1;
 	}
 	return 0;
